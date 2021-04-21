@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{cc08f600-e978-49dd-94bb-a853bd3be5fc}">
+		<property name="assetPath">
+			<value>coffee_pour.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0001587301587302</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8af80ec8-6026-4e06-b748-f934d999d4eb}</destination>
+		</relationship>
+	</object>
+</objects>
