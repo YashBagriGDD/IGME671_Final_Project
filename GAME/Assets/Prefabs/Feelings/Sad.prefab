@@ -52,3 +52,4 @@ MonoBehaviour:
   - {fileID: 3890595438557697286, guid: 0367be8a4949a59aea5cb815ccfc68ed, type: 3}
   - {fileID: 7845028024295284339, guid: 8437a64e02de482a3a1bca6620577a53, type: 3}
   - {fileID: 3027646183322294619, guid: f4f9a138faaf7f3a09029eb80810a535, type: 3}
+  Event: event:/Emotion/Sad

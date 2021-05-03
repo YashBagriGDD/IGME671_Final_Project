@@ -15,11 +15,11 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637555893433885374
+  lastModified: 637555944900051979
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1810
+    Value: 1964
   Exists: 1
 --- !u!114 &-6097798888196979797
 MonoBehaviour:
@@ -60,8 +60,7 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: -3451689522003002026}
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -111,6 +110,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 7001
+--- !u!114 &-4535448749943351652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Excitement
+  m_EditorClassIdentifier: 
+  Name: Excitement
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 439606953
+    data2: 12364701
+  Exists: 1
 --- !u!114 &-4439220784322230602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +208,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637555893434772589
+  lastModified: 637555944898454972
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -254,7 +273,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Interactables.bank
   Name: Interactables
   StudioPath: bank:/Interactables
-  lastModified: 637555893435535768
+  lastModified: 637555944899976785
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -339,12 +358,13 @@ MonoBehaviour:
   - {fileID: 3572850922591913551}
   - {fileID: -5498607179451662379}
   - {fileID: 5080340894683681270}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -4535448749943351652}
   MasterBanks:
   - {fileID: 4542456445306582087}
   StringsBanks:
   - {fileID: -6934890190279002825}
-  stringsBankWriteTime: 637555893433885374
+  stringsBankWriteTime: 637555944900051979
   cacheVersion: 6
 --- !u!114 &234767013392154117
 MonoBehaviour:
@@ -369,6 +389,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 852
+--- !u!114 &434250994368298917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AC/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &478449642689971920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AC/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &683221271982561605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +444,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637555893434106493
+  lastModified: 637555944900280456
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -426,7 +486,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637555893435007061
+  lastModified: 637555944900485433
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -450,7 +510,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6097798888196979797}
+  - {fileID: 478449642689971920}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -512,7 +572,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637555893433855444
+  lastModified: 637555944900021794
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -697,6 +757,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 10723
+--- !u!114 &8956234298223897249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game_Ambience/Excitement
+  m_EditorClassIdentifier: 
+  Name: Excitement
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &9205596025052949997
 MonoBehaviour:
   m_ObjectHideFlags: 0

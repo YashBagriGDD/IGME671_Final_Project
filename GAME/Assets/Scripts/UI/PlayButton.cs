@@ -24,17 +24,20 @@ namespace UI
 
         private void Start()
         {
-            AudioManager.Instance.ChangeClip(menuAudio);
+            //AudioManager.Instance.ChangeClip(menuAudio);
         }
 
         private void ButtonClicked()
         {
-            AudioManager.Instance.PlaySound(audioClip);    
+            //AudioManager.Instance.PlaySound(audioClip);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Correct", GetComponent<Transform>().position);
+            AudioManager.Instance.StopMenuMusic();
         }
 
         private void GoToMainGame()
         {
             SceneChanger.Instance.ChangeScene(1);
+            AudioManager.Instance.StartGameMusic();
         }
     }
 }

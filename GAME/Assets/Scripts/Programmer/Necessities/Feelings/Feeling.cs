@@ -11,6 +11,9 @@ namespace Programmer.Necessities.Feelings
         [SerializeField] private Sprite sprite;
         [SerializeField] private KeyUI[] keys;
 
+        [FMODUnity.EventRef]
+        public string Event;
+
         public Sprite Sprite => sprite;
 
         public KeyUI[] Keys => keys;
@@ -18,6 +21,8 @@ namespace Programmer.Necessities.Feelings
         private Dictionary<KeyUI, Sprite> _keyDictionary;
         
         public AudioClip GetRandomAudioClip() => audios[Random.Range(0, audios.Length - 1)];
+
+        public String GetEvent() => Event;
         
     }
 }

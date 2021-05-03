@@ -61,7 +61,8 @@ namespace Programmer.Necessities
 
         private void MakeSound()
         {
-            AudioManager.Instance.PlaySound(_currentFeeling.GetRandomAudioClip());
+            //AudioManager.Instance.PlaySound(_currentFeeling.GetRandomAudioClip());
+            FMODUnity.RuntimeManager.PlayOneShot(_currentFeeling.GetEvent(), GetComponent<Transform>().position);
         }
         
         private void Interact(Interactor interactor)
