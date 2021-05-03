@@ -15,12 +15,56 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637546442708238961
+  lastModified: 637555893433885374
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1582
+    Value: 1810
   Exists: 1
+--- !u!114 &-6097798888196979797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AC/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-5498607179451662379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Game_Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Game_Ambience
+  guid: 840746c122406d4688874e85f0b9f1dd
+  Banks:
+  - {fileID: -3096843715149671023}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3451689522003002026}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4944503908313502168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,7 +80,7 @@ MonoBehaviour:
   Path: event:/Ambience/Walking
   guid: 01c0da3b3fb5a043a997197eb3d7540e
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -3096843715149671023}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -59,7 +103,7 @@ MonoBehaviour:
   Path: event:/Problem/Pour_Coffee
   guid: 29e09bd204f9c642bb49907f25f82cf9
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -82,7 +126,7 @@ MonoBehaviour:
   Path: event:/Emotion/Very_Sad
   guid: 435128a2e04e8d49acf27ff72cb3bc52
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -90,6 +134,65 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 350
+--- !u!114 &-3686598964524927781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AC/Broken
+  m_EditorClassIdentifier: 
+  Name: Broken
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-3451689522003002026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game_Ambience/Excitement
+  m_EditorClassIdentifier: 
+  Name: Excitement
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-3096843715149671023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/final_proj_fmod/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 637555893434772589
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2791140135634357267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,14 +208,14 @@ MonoBehaviour:
   Path: event:/BGM/Game_Over
   guid: 2f7dfa82dd94a7479496d862ddb8037b
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: 683221271982561605}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1950
+  Length: 2720
 --- !u!114 &-2533748828728302576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +231,7 @@ MonoBehaviour:
   Path: event:/Problem/Feed_Fish
   guid: 8766cd1f92210d4d938681d8820d74f5
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -136,6 +239,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5947
+--- !u!114 &-1071792059247445201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Interactables.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/final_proj_fmod/Build/Desktop/Interactables.bank
+  Name: Interactables
+  StudioPath: bank:/Interactables
+  lastModified: 637555893435535768
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-354979305218324026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/BGM/Game_Ambience
   guid: 840746c122406d4688874e85f0b9f1dd
-  Banks:
-  - {fileID: 4542456445306582087}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -195,6 +316,10 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -6934890190279002825}
   - {fileID: 4542456445306582087}
+  - {fileID: -3096843715149671023}
+  - {fileID: -1071792059247445201}
+  - {fileID: 683221271982561605}
+  - {fileID: 2165378199275059324}
   EditorEvents:
   - {fileID: -4944503908313502168}
   - {fileID: 1715687051287561160}
@@ -208,17 +333,18 @@ MonoBehaviour:
   - {fileID: 9205596025052949997}
   - {fileID: 4763159976181236630}
   - {fileID: 3186459798636320629}
-  - {fileID: -170754191773837667}
   - {fileID: -2533748828728302576}
   - {fileID: 5930039738339794823}
   - {fileID: 5942530010502556078}
   - {fileID: 3572850922591913551}
+  - {fileID: -5498607179451662379}
+  - {fileID: 5080340894683681270}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4542456445306582087}
   StringsBanks:
   - {fileID: -6934890190279002825}
-  stringsBankWriteTime: 637546442708238961
+  stringsBankWriteTime: 637555893433885374
   cacheVersion: 6
 --- !u!114 &234767013392154117
 MonoBehaviour:
@@ -235,7 +361,7 @@ MonoBehaviour:
   Path: event:/SFX/Correct
   guid: 560135bbee245840a4634d60aafbcc08
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: 2165378199275059324}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -243,6 +369,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 852
+--- !u!114 &683221271982561605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/final_proj_fmod/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 637555893434106493
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1715687051287561160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +403,7 @@ MonoBehaviour:
   Path: event:/Emotion/Angry
   guid: 1644dca5402e654bb8eec09104f775b0
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -266,6 +411,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 600
+--- !u!114 &2165378199275059324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/final_proj_fmod/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 637555893435007061
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3186459798636320629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,12 +445,12 @@ MonoBehaviour:
   Path: event:/Problem/AC
   guid: 832b24810102cd4d9146ffdbf1beefe7
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7116681391860074915}
+  - {fileID: -6097798888196979797}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -305,7 +469,7 @@ MonoBehaviour:
   Path: event:/Emotion/Bored
   guid: fee01034398b5648a1ed5665ba8bd51e
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -313,6 +477,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 950
+--- !u!114 &4247488624711416651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game_Ambience/Excitement
+  m_EditorClassIdentifier: 
+  Name: Excitement
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &4542456445306582087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +512,7 @@ MonoBehaviour:
   Path: FMOD/final_proj_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637546442708199070
+  lastModified: 637555893433855444
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -347,7 +531,7 @@ MonoBehaviour:
   Path: event:/Problem/Router
   guid: 80517533ebba414bb783e4818d921a6c
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -355,6 +539,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &5080340894683681270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/Game_Song
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/Game_Song
+  guid: e5ede9d4b3c4e748b5cdf45a278a0abb
+  Banks:
+  - {fileID: 683221271982561605}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5590196588474235893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +577,7 @@ MonoBehaviour:
   Path: event:/Problem/Water_Plants
   guid: 57c3886eb7be5f4396cedf3c1906af7f
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -393,7 +600,7 @@ MonoBehaviour:
   Path: event:/SFX/Grab_Item
   guid: e6f630e52d6e5e4e8ff385caa36fabc3
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: 2165378199275059324}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -416,7 +623,7 @@ MonoBehaviour:
   Path: event:/BGM/Menu
   guid: f1cc2701799298459821646d5975e434
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: 683221271982561605}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -443,7 +650,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8217175257817174105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +666,7 @@ MonoBehaviour:
   Path: event:/Emotion/Sad
   guid: 4db4ec3bcaf37e41b9149bc5f7a4080f
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -482,7 +689,7 @@ MonoBehaviour:
   Path: event:/Ambience/White_Noise
   guid: 52175cd7cf080b429b1f66830bd34a80
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -3096843715149671023}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -505,7 +712,7 @@ MonoBehaviour:
   Path: event:/Problem/Apple
   guid: 6df8aed1b445ff4ea379cfcd573088ee
   Banks:
-  - {fileID: 4542456445306582087}
+  - {fileID: -1071792059247445201}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

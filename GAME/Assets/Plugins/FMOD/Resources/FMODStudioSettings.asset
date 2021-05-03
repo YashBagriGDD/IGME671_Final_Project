@@ -333,7 +333,7 @@ MonoBehaviour:
   sourceProjectPath: FMOD/final_proj_fmod/final_proj_fmod.fspro
   sourceBankPath: FMOD\final_proj_fmod\Build
   SourceBankPathUnformatted: 
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
@@ -352,8 +352,13 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
-  BanksToLoad: []
+  Banks:
+  - Ambience
+  - Interactables
+  - Music
+  - SFX
+  BanksToLoad:
+  - 
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0

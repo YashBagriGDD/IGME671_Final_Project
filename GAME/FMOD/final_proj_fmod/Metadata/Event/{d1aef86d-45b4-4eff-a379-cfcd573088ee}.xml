@@ -32,7 +32,7 @@
 			<destination>{9acd0407-e61f-4a8b-b6a7-25cf437efbc7}</destination>
 		</relationship>
 		<relationship name="banks">
-			<destination>{7994aacb-9818-4cd2-99b1-7c60235dfe01}</destination>
+			<destination>{0028b8c8-8d3d-4b87-9971-f5d2b535a9d8}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{c3f0c50f-1d9e-48a8-8d86-8663f91e2972}">
@@ -53,7 +53,7 @@
 			<destination>{724aff32-08ac-448d-84a6-1f9b08f49912}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{82b1fd7b-3532-45e1-a847-416d5c58fcdb}</destination>
+			<destination>{f626f34d-17b4-4d12-bfd6-e36fa7c71593}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{a14b3794-c4da-4686-b158-c3a843187c07}" />
@@ -94,6 +94,9 @@
 		<property name="length">
 			<value>0.77000000000000002</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{c58d98e1-11ab-4e93-96e2-75645237557c}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{2ff321b8-98a4-4757-b49b-1c5b2acd7d6d}</destination>
 		</relationship>
@@ -105,6 +108,9 @@
 		<property name="length">
 			<value>0.9189795918367345</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{7576ade6-cfb8-48df-899b-2f45afb44caf}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{5471229e-cb9b-49c9-9b11-7e4def61bc8a}</destination>
 		</relationship>
@@ -130,6 +136,22 @@
 	</object>
 	<object class="MixerBusPanner" id="{972be980-0a1f-48d0-9ff2-33f1adb4445d}" />
 	<object class="MixerBusFader" id="{80e99097-ff39-42e6-b290-90eb9b5733c8}" />
+	<object class="RandomizerModulator" id="{c58d98e1-11ab-4e93-96e2-75645237557c}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>6.25</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{7576ade6-cfb8-48df-899b-2f45afb44caf}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>6.25</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{260e650a-0eba-45fc-bd7f-3c968d551683}">
 		<relationship name="effects">
 			<destination>{5638a6ad-c503-460a-ac54-b052fe2b01cc}</destination>
