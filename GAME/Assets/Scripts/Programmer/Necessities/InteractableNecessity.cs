@@ -11,6 +11,7 @@ namespace Programmer.Necessities
         [SerializeField] private Interactable interactable;
         [SerializeField] private AudioClip satisfyClip;
         [SerializeField] private Animator animator;
+        [FMODUnity.EventRef] [SerializeField] private string fmodEvent;
 
         private bool _hasAnimator;
         private bool _hasSatisfyClip;
@@ -22,7 +23,7 @@ namespace Programmer.Necessities
             base.Awake();
             interactable.OnInteract += Interact;
             _hasAnimator = animator != null;
-            _hasSatisfyClip = satisfyClip != null;
+            _hasSatisfyClip = fmodEvent != null;
             if(_hasAnimator) OnNeed += PlayAnimationOnNeed;
         }
 
@@ -34,8 +35,8 @@ namespace Programmer.Necessities
         private void Interact(Interactor interactor)
         {
             if (!Active || CurrentNeed < MinimumNeed) return;
-            if(_hasSatisfyClip) AudioManager.Instance.PlaySound(satisfyClip);
-            if(_hasAnimator) animator.SetTrigger(SatisfyTrigger);
+            if(_hasSatisfyClip) FMODUnity.RuntimeManager.PlayOneShot(fmodEvent, GetComponent<Transform>().position);
+            if (_hasAnimator) animator.SetTrigger(SatisfyTrigger);
             Satisfy();
         }
     }

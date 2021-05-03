@@ -1093,7 +1093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0934901, y: 0.28961667}
   m_AnchorMax: {x: 0.896, y: 0.81100005}
-  m_AnchoredPosition: {x: 0.30000305, y: -1}
+  m_AnchoredPosition: {x: 0.3000183, y: -1}
   m_SizeDelta: {x: -1.2999992, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &199221552
@@ -1398,12 +1398,14 @@ MonoBehaviour:
   pointLight: {fileID: 1300485250}
   animator: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 9d601b940321c7a42afb51e72cc916c5, type: 3}
+  fmodEvent: 
   workingColor: {r: 0, g: 2, b: 0, a: 1}
   notWorkingColor: {r: 1.4980392, g: 0, b: 0, a: 1}
   minimumSecondsBeforeBreaking: 20
   maximumSecondsBeforeBreaking: 30
   soundOnBreak: {fileID: 0}
   turnableAnimator: {fileID: 2032999484}
+  fmodEventOnBreak: 
 --- !u!1 &326793681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1682,7 @@ MonoBehaviour:
   pointLight: {fileID: 1144620984}
   animator: {fileID: 381475898}
   audioClip: {fileID: 8300000, guid: afc463d6103e20448a987f89d9c6259a, type: 3}
+  fmodEvent: event:/Problem/Apple
 --- !u!212 &381475895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2219,6 +2222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startingNeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741272910842977394, guid: 76f509d55419d12c49eb67e3fa05a943,
+        type: 3}
+      propertyPath: fmodEvent
+      value: event:/Problem/Feed_Fish
       objectReference: {fileID: 0}
     - target: {fileID: 4708334484257085217, guid: 76f509d55419d12c49eb67e3fa05a943,
         type: 3}
@@ -3095,6 +3103,7 @@ MonoBehaviour:
   pointLight: {fileID: 192824021}
   animator: {fileID: 0}
   audioClip: {fileID: 0}
+  fmodEvent: 
 --- !u!61 &764578839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3259,7 +3268,7 @@ PrefabInstance:
     - target: {fileID: 6944850862289406156, guid: ede2738072dd81b9f810f4b5d4b302a0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.29000854
+      value: 0.28997803
       objectReference: {fileID: 0}
     - target: {fileID: 6944850862289406156, guid: ede2738072dd81b9f810f4b5d4b302a0,
         type: 3}
@@ -3933,7 +3942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.9054075}
   m_AnchorMax: {x: 0.365, y: 0.97774076}
-  m_AnchoredPosition: {x: -0.69999695, y: 1.1000061}
+  m_AnchoredPosition: {x: -0.7000122, y: 1.0999756}
   m_SizeDelta: {x: 1.9300003, y: 1.3699999}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1309706550
@@ -4107,7 +4116,7 @@ PrefabInstance:
     - target: {fileID: 6876306804726397941, guid: 7dfe8654cd4f514919e4a6e01a4a45b2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.4000015
+      value: -1.4000092
       objectReference: {fileID: 0}
     - target: {fileID: 6876306804726397941, guid: 7dfe8654cd4f514919e4a6e01a4a45b2,
         type: 3}
@@ -5152,6 +5161,7 @@ MonoBehaviour:
   pointLight: {fileID: 1664580733}
   animator: {fileID: 0}
   audioClip: {fileID: 0}
+  fmodEvent: event:/SFX/Grab_Item
 --- !u!114 &1591868008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5326,7 +5336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.92800003, y: 0.014851852}
   m_AnchorMax: {x: 0.98831487, y: 0.107148156}
-  m_AnchoredPosition: {x: -1.1939087, y: 1.2802734}
+  m_AnchoredPosition: {x: -1.1939697, y: 1.2802734}
   m_SizeDelta: {x: -1.5099983, y: -1.4910011}
   m_Pivot: {x: 1.0576775, y: -0.1884751}
 --- !u!114 &1694354225
@@ -5672,12 +5682,14 @@ MonoBehaviour:
   pointLight: {fileID: 163725317}
   animator: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 6a6ee1a6b8609c5469d2afc5e3a9e4a1, type: 3}
+  fmodEvent: 
   workingColor: {r: 0, g: 2, b: 0, a: 1}
   notWorkingColor: {r: 1.4980392, g: 0, b: 0, a: 1}
   minimumSecondsBeforeBreaking: 15
   maximumSecondsBeforeBreaking: 20
   soundOnBreak: {fileID: 8300000, guid: 417975c5b4a28e31885f65c976453b34, type: 3}
   turnableAnimator: {fileID: 0}
+  fmodEventOnBreak: event:/Problem/Router
 --- !u!114 &1743527752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6071,7 +6083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14400001, y: 0.14246117}
   m_AnchorMax: {x: 0.860689, y: 0.86500007}
-  m_AnchoredPosition: {x: -0.0099983215, y: 0.30000305}
+  m_AnchoredPosition: {x: -0.009994507, y: 0.30000305}
   m_SizeDelta: {x: -0.01999998, y: 0.1500001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036451328
@@ -6227,6 +6239,7 @@ MonoBehaviour:
   pointLight: {fileID: 82961129}
   animator: {fileID: 0}
   audioClip: {fileID: 8300000, guid: 2944b6617bfbe55148036735d76f9955, type: 3}
+  fmodEvent: event:/Problem/Pour_Coffee
 --- !u!212 &2057683763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6355,7 +6368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4465278, y: 0.8052963}
   m_AnchorMax: {x: 0.5523704, y: 0.97774076}
-  m_AnchoredPosition: {x: 0.5, y: 0.1000061}
+  m_AnchoredPosition: {x: 0.5, y: 0.099975586}
   m_SizeDelta: {x: 2.4000015, y: -0.019996643}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2111220820
@@ -7326,6 +7339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: increaseRatio
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741272910842977394, guid: 76f509d55419d12c49eb67e3fa05a943,
+        type: 3}
+      propertyPath: fmodEvent
+      value: event:/Problem/Water_Plants
       objectReference: {fileID: 0}
     - target: {fileID: 4708334484257085217, guid: 76f509d55419d12c49eb67e3fa05a943,
         type: 3}

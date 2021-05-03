@@ -12,6 +12,7 @@ namespace Interactables
         [SerializeField] private Animator animator;
         [SerializeField] private AudioClip audioClip;
         public event Action<Interactor> OnInteract;
+        [FMODUnity.EventRef] [SerializeField] private string fmodEvent;
 
         private bool _hasAnimator;
         private bool _hasAudioClip;
@@ -21,14 +22,14 @@ namespace Interactables
         {
             pointLight.enabled = false;
             _hasAnimator = animator != null;
-            _hasAudioClip = audioClip != null;
+            _hasAudioClip = fmodEvent != null;
         }
 
         public virtual void Interact(Interactor interactor)
         {
             OnInteract?.Invoke(interactor);
             if(_hasAnimator) animator.SetTrigger(InteractTrigger);
-            if(_hasAudioClip) AudioManager.Instance.PlaySound(audioClip);
+            if(_hasAudioClip) FMODUnity.RuntimeManager.PlayOneShot(fmodEvent, GetComponent<Transform>().position);
         }
         public void Highlight()
         {

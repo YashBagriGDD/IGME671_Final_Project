@@ -16,6 +16,8 @@ namespace Interactables
         [SerializeField] private float maximumSecondsBeforeBreaking;
         [SerializeField] private AudioClip soundOnBreak;
         [SerializeField] private Animator turnableAnimator;
+
+        [FMODUnity.EventRef] [SerializeField] private string fmodEventOnBreak;
         
         public event Action OnStartWorking;
         public event Action OnStopWorking;
@@ -36,7 +38,7 @@ namespace Interactables
             _material = _spriteRenderer.material;
             _material.color = workingColor;
             CalculateBreakingTime();
-            _hasAudio = soundOnBreak != null;
+            _hasAudio = fmodEventOnBreak != null;
             _hasTurnableAnimator = turnableAnimator != null;
             if(_hasTurnableAnimator) turnableAnimator.SetTrigger(StartWorkingTrigger);
         }
@@ -63,7 +65,7 @@ namespace Interactables
             yield return new WaitForSeconds(breakingTime);
             _isWorking = false;
             _material.color = notWorkingColor;
-            if(_hasAudio) AudioManager.Instance.PlaySound(soundOnBreak);
+            if(_hasAudio) FMODUnity.RuntimeManager.PlayOneShot(fmodEventOnBreak, GetComponent<Transform>().position);
             OnStopWorking?.Invoke();
             if(_hasTurnableAnimator) turnableAnimator.SetTrigger(StopWorkingTrigger);
         }
