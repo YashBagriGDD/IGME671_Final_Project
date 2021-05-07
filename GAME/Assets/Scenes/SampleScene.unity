@@ -572,7 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   animator: {fileID: 348494656}
-  timeBetweenStep: 0.4
+  timeBetweenStep: 0.38
   fmodEvent: event:/Ambience/Walking
 --- !u!50 &146031767
 Rigidbody2D:
