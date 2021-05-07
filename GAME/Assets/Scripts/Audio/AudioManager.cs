@@ -13,7 +13,8 @@ namespace Sound
         [SerializeField] private AudioSourcePooleable audioSourcePrefab;
         [SerializeField] private AudioClip mainMusic;
         [SerializeField] private float fadeTime = 2f;
-        
+        [SerializeField] private int sceneNum;
+
         public static AudioManager Instance;
         public bool Muted { get; private set; }
         public bool SoundEffectsMuted { get; set; }
@@ -59,7 +60,9 @@ namespace Sound
             //_audioSource.clip = mainMusic;
             //_audioSource.loop = true;
             //_audioSource.Play();
-            StartMenuMusic();
+
+            if (sceneNum == 0) StartMenuMusic();
+            else if (sceneNum == 1) StartGameMusic();
         }
 
         public void PlaySound(AudioClip clip, float volume = 1)
@@ -86,13 +89,13 @@ namespace Sound
 
         public void Mute()
         {
-            _audioSource.Pause();
+            //_audioSource.Pause();
             Muted = true;
         }
 
         public void UnMute()
         {
-            _audioSource.Play();
+            //_audioSource.Play();
             Muted = false;
         }
         

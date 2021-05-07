@@ -572,6 +572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   animator: {fileID: 348494656}
+  timeBetweenStep: 0.4
+  fmodEvent: event:/Ambience/Walking
 --- !u!50 &146031767
 Rigidbody2D:
   serializedVersion: 4
@@ -7423,6 +7425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256696540068979437, guid: 91b7a4b79dda1f3af86f4c52307af956,
+        type: 3}
+      propertyPath: sceneNum
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4256696540068979438, guid: 91b7a4b79dda1f3af86f4c52307af956,
         type: 3}

@@ -7,6 +7,10 @@ namespace Player
     {
         [SerializeField] private float speed;
         [SerializeField] private Animator animator;
+        [SerializeField] private float timeBetweenStep;
+        [FMODUnity.EventRef] public string fmodEvent;
+
+        private float timeSinceLastStep = 0f;
 
         public bool Active
         {
@@ -25,6 +29,7 @@ namespace Player
         private static readonly int XSpeed = Animator.StringToHash("x_speed");
         private static readonly int YSpeed = Animator.StringToHash("y_speed");
 
+
         private void Awake()
         {
             Active = true;
@@ -34,12 +39,20 @@ namespace Player
 
         private void Update()
         {
-            if (!Active) return;
+            timeSinceLastStep += Time.deltaTime;
+            if (!Active) { return; }
             var x = Input.GetAxis("Horizontal");
             var y = Input.GetAxis("Vertical");
+
+            if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) {
+                if(timeSinceLastStep > timeBetweenStep) {
+                    FMODUnity.RuntimeManager.PlayOneShot(fmodEvent, GetComponent<Transform>().position);
+                    timeSinceLastStep = 0;
+                }
+            }
         
             ChangeVelocity(new Vector2(x, y) * speed);
-            
+
            _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
         }
 
