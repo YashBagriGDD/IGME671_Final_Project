@@ -33,10 +33,10 @@ namespace Sound
             if (AudioManager.Instance.Muted)
             {
                 UnMute();
-                AudioManager.Instance.PlaySound(clickSound);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Correct", GetComponent<Transform>().position);
                 return;
             }
-            AudioManager.Instance.PlaySound(clickSound);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Correct", GetComponent<Transform>().position);
             Mute();
         }
 

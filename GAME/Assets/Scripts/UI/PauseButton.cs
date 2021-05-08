@@ -34,13 +34,13 @@ namespace UI
                 Time.timeScale = 1;
                 paused = false;
                 pausedPanel.SetActive(false);
-                audioSource.Stop();
+                //audioSource.Stop();
                 AudioManager.Instance.UnMute();
             }
             else
             {
                 AudioManager.Instance.Mute();
-                audioSource.Play();
+                //audioSource.Play();
                 _image.sprite = pausedSprite;
                 Time.timeScale = 0;
                 paused = true;

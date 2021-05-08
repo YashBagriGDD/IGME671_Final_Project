@@ -31,6 +31,11 @@ namespace Sound
         private static FMOD.Studio.EventInstance WhiteNoise;
         private static FMOD.Studio.EventInstance ACNoise;
 
+        private static FMOD.Studio.Bus musicBus;
+        private static FMOD.Studio.Bus sfxBus;
+        private static FMOD.Studio.Bus interactBus;
+        private static FMOD.Studio.Bus ambienceBus;
+
         private void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
@@ -53,9 +58,15 @@ namespace Sound
             GameAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/Game_Ambience");
             WhiteNoise = FMODUnity.RuntimeManager.CreateInstance("event:/Ambience/White_Noise");
             ACNoise = FMODUnity.RuntimeManager.CreateInstance("event:/Problem/AC");
+
+            musicBus = FMODUnity.RuntimeManager.GetBus("bus:/Music");
+            sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+            interactBus = FMODUnity.RuntimeManager.GetBus("bus:/Interactables"); 
+            ambienceBus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
+
         }
 
-        private void Start()
+    private void Start()
         {
             //_audioSource.clip = mainMusic;
             //_audioSource.loop = true;
@@ -90,12 +101,18 @@ namespace Sound
         public void Mute()
         {
             //_audioSource.Pause();
+            musicBus.setMute(true);
+            ambienceBus.setMute(true);
+            interactBus.setMute(true);
             Muted = true;
         }
 
         public void UnMute()
         {
             //_audioSource.Play();
+            musicBus.setMute(false);
+            ambienceBus.setMute(false);
+            interactBus.setMute(true);
             Muted = false;
         }
         
