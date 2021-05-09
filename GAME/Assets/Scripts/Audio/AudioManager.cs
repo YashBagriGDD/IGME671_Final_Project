@@ -4,11 +4,9 @@ using Audio;
 using UnityEngine;
 using Utils;
 
-namespace Sound
-{
+namespace Sound {
     [RequireComponent(typeof(AudioSource))]
-    public class AudioManager: MonoBehaviour
-    {
+    public class AudioManager : Singleton<AudioManager> {
         [SerializeField] private int audioSourceQuantity;
         [SerializeField] private AudioSourcePooleable audioSourcePrefab;
         [SerializeField] private AudioClip mainMusic;
@@ -18,6 +16,8 @@ namespace Sound
         public static AudioManager Instance;
         public bool Muted { get; private set; }
         public bool SoundEffectsMuted { get; set; }
+        public bool GameMusicOn { get; set; }
+        public bool MenuMusicOn { get; set; }
 
         private AudioSource _audioSource;
         private ObjectPooler<AudioSourcePooleable> _pooler;
@@ -36,19 +36,16 @@ namespace Sound
         private static FMOD.Studio.Bus interactBus;
         private static FMOD.Studio.Bus ambienceBus;
 
-        private void Awake()
-        {
+        private void Awake() {
             _audioSource = GetComponent<AudioSource>();
-            if (Instance != null)
-            {
+            if (Instance != null) {
                 Destroy(gameObject);
             }
-            else
-            {
+            else {
                 Instance = this;
                 DontDestroyOnLoad(this);
             }
-            
+
             PoolAudioSources();
 
             //Attach Events to fmod instances
@@ -61,23 +58,22 @@ namespace Sound
 
             musicBus = FMODUnity.RuntimeManager.GetBus("bus:/Music");
             sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
-            interactBus = FMODUnity.RuntimeManager.GetBus("bus:/Interactables"); 
+            interactBus = FMODUnity.RuntimeManager.GetBus("bus:/Interactables");
             ambienceBus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
 
         }
 
-    private void Start()
-        {
+        private void Start() {
             //_audioSource.clip = mainMusic;
             //_audioSource.loop = true;
             //_audioSource.Play();
 
-            if (sceneNum == 0) StartMenuMusic();
-            else if (sceneNum == 1) StartGameMusic();
+            //if (sceneNum == 0) StartMenuMusic();
+            //if (sceneNum == 1) StartGameMusic();
+            StartMenuMusic();
         }
 
-        public void PlaySound(AudioClip clip, float volume = 1)
-        {
+        public void PlaySound(AudioClip clip, float volume = 1) {
             //if (Muted || SoundEffectsMuted) return;
             //var audioSource = _pooler.GetNextObject();
             //audioSource.SetClip(clip);
@@ -85,21 +81,18 @@ namespace Sound
             //audioSource.StartClip();
         }
 
-        public void PlaySoundWithFade(AudioClip clip, float volume)
-        {
+        public void PlaySoundWithFade(AudioClip clip, float volume) {
             //if (Muted || SoundEffectsMuted) return;
             //var audioSource = _pooler.GetNextObject();
             //audioSource.SetClip(clip);
             //StartCoroutine(AudioFades.FadeIn(audioSource.AudioSource, fadeTime, volume));
-        } 
-        
-        public void PlaySound(AudioClip clip)
-        {
+        }
+
+        public void PlaySound(AudioClip clip) {
             //PlaySound(clip, 1);
         }
 
-        public void Mute()
-        {
+        public void Mute() {
             //_audioSource.Pause();
             musicBus.setMute(true);
             ambienceBus.setMute(true);
@@ -107,47 +100,43 @@ namespace Sound
             Muted = true;
         }
 
-        public void UnMute()
-        {
+        public void UnMute() {
             //_audioSource.Play();
             musicBus.setMute(false);
             ambienceBus.setMute(false);
             interactBus.setMute(false);
             Muted = false;
         }
-        
-        public void ChangeClip(AudioClip clip)
-        {
+
+        public void ChangeClip(AudioClip clip) {
             //_audioSource.clip = clip;
             //mainMusic = clip;
             //if(!Muted) _audioSource.Play();
         }
 
-        public void FadeOutClip()
-        {
+        public void FadeOutClip() {
             //StartCoroutine(AudioFades.FadeOut(_audioSource, fadeTime));
         }
 
-        public void FadeOutClip(float velocity)
-        {
+        public void FadeOutClip(float velocity) {
             //StartCoroutine(AudioFades.FadeOut(_audioSource, velocity));
         }
 
-        public void PoolAudioSources()
-        {
+        public void PoolAudioSources() {
             //_pooler = new ObjectPooler<AudioSourcePooleable>();
             //_pooler.InstantiateObjects(audioSourceQuantity, audioSourcePrefab, "Audio Sources");
         }
 
         //FMOD play events
-        public void StartMenuMusic() => MenuMusic.start();
-        public void StopMenuMusic() => MenuMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        public void StartMenuMusic() { MenuMusic.start(); MenuMusicOn = true; }
+        public void StopMenuMusic() { MenuMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); MenuMusicOn = false; }
 
         public void StartGameMusic() {
             GameMusic.start();
             GameAmbience.start();
             WhiteNoise.start();
             ACNoise.start();
+            GameMusicOn = true;
         }
 
         public void StopGameMusic() {
@@ -155,8 +144,14 @@ namespace Sound
             GameAmbience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             WhiteNoise.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             ACNoise.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            GameMusicOn = false;
         }
 
         public void StartGameOverMusic() => GameOverMusic.start();
+
+        void onDestroy() {
+            StopGameMusic();
+            StopMenuMusic();
+        }
     }
 }

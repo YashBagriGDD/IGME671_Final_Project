@@ -57,7 +57,7 @@ namespace DefaultNamespace
         }
 
         private void Start() {
-            //AudioManager.Instance.ChangeClip(mainGameAudio);
+            AudioManager.Instance.StartGameMusic();
         }
 
         private void Update() {
@@ -80,20 +80,17 @@ namespace DefaultNamespace
 
         private void Win() {
             if (_gameOver) return;
+            AudioManager.Instance.StopGameMusic();
             LevelManager.Instance.NextLevel();
             _gameOver = true;
-            winPanel.StartSlides();
-            
-            AudioManager.Instance.StopGameMusic();
+            winPanel.StartSlides();            
         }
 
         private void GameOver() {
             if (_gameOver) return;
-            _gameOver = true;
-
             AudioManager.Instance.StopGameMusic();
             AudioManager.Instance.StartGameOverMusic();
-
+            _gameOver = true;
             gameOverPanel.StartSlides();
         }
 
@@ -101,7 +98,7 @@ namespace DefaultNamespace
         private void GoToMenu() {
             AudioManager.Instance.StopGameMusic();
             SceneChanger.Instance.ChangeScene(0);
-            AudioManager.Instance.StartMenuMusic();
+            //AudioManager.Instance.StartMenuMusic();
         }
 
         /*

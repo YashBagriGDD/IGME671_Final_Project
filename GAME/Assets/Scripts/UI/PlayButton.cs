@@ -38,7 +38,7 @@ namespace UI
         {
             AudioManager.Instance.StopMenuMusic();
             SceneChanger.Instance.ChangeScene(1);
-            AudioManager.Instance.StartGameMusic();
+            //AudioManager.Instance.StartGameMusic();
         }
     }
 }
