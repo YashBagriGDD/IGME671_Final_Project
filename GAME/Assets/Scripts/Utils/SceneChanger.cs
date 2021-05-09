@@ -38,7 +38,8 @@ namespace Utils
             {
                 panelsSlide.StopCoroutine(coroutine);
                 loader.alpha = 1;
-                AudioManager.Instance.PoolAudioSources();
+                //AudioManager.Instance.PoolAudioSources();
+                if (index == 0) AudioManager.Instance.StartMenuMusic();                
                 panelsSlide.HideMe(loader);
             };
         }
