@@ -96,9 +96,9 @@ namespace DefaultNamespace
             AudioManager.Instance.StartGameOverMusic();
 
             gameOverPanel.StartSlides();
-            AudioManager.Instance.FadeOutClip();
-            AudioManager.Instance.PlaySoundWithFade(gameOverSound, 0.5f);
-            AudioManager.Instance.SoundEffectsMuted = true;
+            //AudioManager.Instance.FadeOutClip();
+            //AudioManager.Instance.PlaySoundWithFade(gameOverSound, 0.5f);
+            //AudioManager.Instance.SoundEffectsMuted = true;
 
             
         }
@@ -108,6 +108,7 @@ namespace DefaultNamespace
             AudioManager.Instance.SoundEffectsMuted = false;
             AudioManager.Instance.StopGameMusic();
             SceneChanger.Instance.ChangeScene(0);
+            AudioManager.Instance.StartMenuMusic();
         }
 
         /*

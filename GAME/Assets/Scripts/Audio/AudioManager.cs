@@ -112,7 +112,7 @@ namespace Sound
             //_audioSource.Play();
             musicBus.setMute(false);
             ambienceBus.setMute(false);
-            interactBus.setMute(true);
+            interactBus.setMute(false);
             Muted = false;
         }
         

@@ -24,10 +24,10 @@
 	<object class="MixerBusFader" id="{0b1e6d99-a4e3-484f-9faa-6ff0348c134b}" />
 	<object class="CompressorEffect" id="{ea9693de-cabc-43b7-a0c7-9102db316e5a}">
 		<property name="threshold">
-			<value>-21</value>
+			<value>-40.5</value>
 		</property>
 		<property name="ratio">
-			<value>4</value>
+			<value>1.25</value>
 		</property>
 		<relationship name="sidechains">
 			<destination>{2695cc84-97a7-4bb7-b1e8-3b5eb59b08af}</destination>
