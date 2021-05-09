@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerMaster" id="{82b1fd7b-3532-45e1-a847-416d5c58fcdb}">
+		<property name="volume">
+			<value>2.5</value>
+		</property>
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
@@ -27,10 +30,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{27af7405-4b3e-44bc-9b19-ef40b3da98b6}" />
-	<object class="LimiterEffect" id="{a782beb3-b295-4627-a934-44030dd3b9f2}" />
+	<object class="LimiterEffect" id="{a782beb3-b295-4627-a934-44030dd3b9f2}">
+		<property name="ceiling">
+			<value>-1</value>
+		</property>
+	</object>
 	<object class="LoudnessMeter" id="{85937d14-5b75-4f75-8016-6c505d2abc0a}">
 		<property name="loudnessTarget">
-			<value>-20</value>
+			<value>-14</value>
 		</property>
 	</object>
 </objects>
